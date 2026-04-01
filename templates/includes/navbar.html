@@ -1,0 +1,106 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="/">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Bilgili Makina Logo" width="200" height="150" class="d-inline-block align-text-top">
+        </a>
+
+        <!-- Hamburger Menü -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menü Linkleri -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">ANA SAYFA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">Hakkımızda</a>
+                </li>
+                <li class="nav-item dropdown mega-dropdown">
+                    <a class="nav-link dropdown-toggle" href="/products" id="urunlerDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Ürünler
+                    </a>
+                    <div class="dropdown-menu mega-menu p-4" aria-labelledby="urunlerDropdown">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6">
+                                <a href="/bms-t">
+                                    <h6 class="text-uppercase">BMS/T</h6>
+                                    <img src="{{ url_for('static', filename='images/bms-t.png') }}" class="img-fluid" alt="BMS/T">
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <a href="/bms-sc">
+                                    <h6 class="text-uppercase">BMS-D</h6>
+                                    <img src="{{ url_for('static', filename='images/bms-d.jpeg') }}" class="img-fluid" alt="BMS-D">
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <a href="/bms-d">
+                                    <h6 class="text-uppercase">BMS-SC</h6>
+                                    <img src="{{ url_for('static', filename='images/BMS-SC.jpg') }}" class="img-fluid" alt="BMS-SC">
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <a href="/bms-2c">
+                                    <h6 class="text-uppercase">BMS/2C</h6>
+                                    <img src="{{ url_for('static', filename='images/bms-2c.png') }}" class="img-fluid" alt="BMS/2C">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-3 col-md-6">
+                                <a href="/bms-3c">
+                                    <h6 class="text-uppercase">BMS-3C</h6>
+                                    <img src="{{ url_for('static', filename='images/bms-3c.jpg') }}" class="img-fluid" alt="BMS-3C">
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <a href="/bms-4c">
+                                    <h6 class="text-uppercase">BMS/4C</h6>
+                                    <img src="{{ url_for('static', filename='images/bms-4c.jpg') }}" class="img-fluid" alt="BMS/4C">
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <a href="/bms-6c">
+                                    <h6 class="text-uppercase">BMS/6C</h6>
+                                    <img src="{{ url_for('static', filename='images/bms-6c.jpg') }}" class="img-fluid" alt="BMS/6C">
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <a href="/bms-8c">
+                                    <h6 class="text-uppercase">BMS/8C</h6>
+                                    <img src="{{ url_for('static', filename='images/bms-6c.jpg') }}" class="img-fluid" alt="BMS/8C">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/dashboard">Kontrol Paneli</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/service">Servis Bakım</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">İletişim</a>
+                </li>
+                ,<li class="nav-item">
+                    <a class="nav-link" href="/logout">logout</a>
+                </li>
+            </ul>
+
+            <!-- Search Butonu -->
+            <div class="d-flex align-items-center ms-auto">
+                <button id="searchButton" class="btn btn-outline-success" type="button">BUTON</button>
+                <form id="searchForm" class="form-inline my-2 my-lg-0 ml-2 d-none">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>

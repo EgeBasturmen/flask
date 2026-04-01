@@ -1,0 +1,83 @@
+{% extends "home.html" %}
+
+{% block body %}
+
+
+    <section class="products-header">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <!-- Sol tarafta başlık ve arka plan rengi -->
+                <div class="col-md-6 d-flex align-items-center justify-content-center bg-dark-red text-white" style="height: 300px;">
+                    <div class="text-center">
+                        <h1 class="display-5">{{product.name}}</h1>
+                            <p><i class="fas fa-home"></i> Anasayfa / Ürünler / {{product.name}}</p>
+                    </div>
+                </div>
+
+                <!-- Sağ tarafta görsel -->
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='images/bilgilimakina2.png') }}" class="img-fluid" alt="Fabrika">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="product-details mt-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Teknik Özellikler</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Özellik</th>
+                            <th>Değer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ad</td>
+                            <td>{{ product.name }}</td>
+                        </tr>
+                        <tr>
+                            <td>Renkler</td>
+                            <td>{{ product.renkler }}</td>
+                        </tr>
+                        <tr>
+                            <td>Min. Tekrar (mm)</td>
+                            <td>{{ product['min-tekrar'] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Maks. Tekrar (mm)</td>
+                            <td>{{ product['maks-tekrar'] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Maks. Hız (m/dak)</td>
+                            <td>{{ product['maks-hız'] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Baskı Olanakları</td>
+                            <td>{{ product['Baskı-Olanakları'] }}</td>
+                        </tr>
+                          <tr>
+                            <td>Boyut</td>
+                            <td>{{ product['Boyut'] }}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    
+
+    
+
+
+
+{% endblock body %}
+

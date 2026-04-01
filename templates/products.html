@@ -1,0 +1,46 @@
+{% extends "home.html" %}
+
+{% block body %}
+
+    <!-- Ürünler başlığı ve arka plan bölümü -->
+    <section class="products-header">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <!-- Sol tarafta başlık ve arka plan rengi -->
+                <div class="col-md-6 d-flex align-items-center justify-content-center bg-dark-red text-white" style="height: 300px;">
+                    <div class="text-center">
+                        <h1 class="display-4">Ürünler</h1>
+                        <p><i class="fas fa-home"></i> Anasayfa / Ürünler</p>
+                    </div>
+                </div>
+
+                <!-- Sağ tarafta görsel -->
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='images/bilgilimakina2.png') }}" class="img-fluid" alt="Fabrika">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-list mt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Loop through the products fetched from the database -->
+                {% for product in products %}
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="{{ url_for('static', filename='images/bms-t.png') }}" alt="{{ product.name }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ product.name }}</h5>
+                            <p class="card-text">Bu ürün hakkında kısa bilgi burada yer alacak.</p>
+                            <a href="/product/{{ product.id }}" class="btn btn-primary">Detaylar</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </section>
+
+{% endblock body %}

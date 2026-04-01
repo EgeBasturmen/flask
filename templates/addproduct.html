@@ -1,0 +1,20 @@
+{% extends "home.html" %}
+
+{% block body %}
+
+{% from "includes/formhelpers.html" import render_field %}
+<form method="post",>
+
+    {{ render_field(form.name,class="form-control") }}
+    {{ render_field(form.renkler, class="form-control", placeholder="Renkler") }}
+    {{ render_field(form.min_tekrar, class="form-control", placeholder="Min Tekrar") }}
+    {{ render_field(form.maks_tekrar, class="form-control", placeholder="Maks Tekrar") }}
+    {{ render_field(form.maks_hiz, class="form-control", placeholder="Maks Hız") }}
+    {{ render_field(form.baski_olanaklari, class="form-control", placeholder="Baskı Olanakları") }}
+    {{ render_field(form.boyut, class="form-control", placeholder="Boyut") }}
+    {{ render_field(form.ekleme, class="form-control", placeholder="Ekleme") }}
+    
+    <button type="submit" class="btn btn-primary">Makine Ekle</button>
+</form>
+
+{% endblock body %}

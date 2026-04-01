@@ -1,0 +1,43 @@
+{% extends "home.html" %}
+
+{% block body %}
+<h3>Kontrol Paneli</h3>
+<br>
+
+<a href="/addproduct" class="btn btn-danger">Makine Ekle</a>
+
+
+{% if products %}
+
+<table class="table table-over">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">İsim</th>
+            <th scope="col">Edit</th>
+            <th scope="col"></th>
+            <th scope="col">Sil</th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+    {% for product in products %}
+    <tr>
+        <th scope="row">{{product.id}}</th>
+        <td scope="row">{{product.name}}</td>
+        <td><a href="" class="btn btn-danger">Güncelle</a></td>
+        <td></td>
+        <td><a href="/delete/{{product.id}}" class="btn btn-danger">Sil</a></td>
+    </tr>
+
+
+    {% endfor %}
+
+    </tbody>
+</table>
+{% else %}
+<div class="alert alert-danger">Henüz Makine Bulunmuyor.</div>
+{% endif %}
+{% endblock  %}
+
